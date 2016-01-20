@@ -1,0 +1,36 @@
+<ion-view view-title="My Rewarding Stores">
+    <head>
+        <style>
+            .round {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 100px;
+                height: 100px;
+            }
+            .round img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                min-width: 100%;
+                min-height: 100%;
+            }
+        </style>
+    </head>
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="row">
+            <div class="col"><div class="round"><a href = "#/app/sweethut"><img src="img/sweethut.jpg"/></a></div></div>
+            <div class="col"><div class="round"><img src="img/target.jpg"/></div></div>
+            <div class="col"><div class="round"><img src="img/tindrum.jpg"/></div></div>
+        </div>
+        <div class="row">
+            <div class="col"><div class="round"><img src="img/victoriasecret.jpg"/></div></div>
+            <div class="col"><div class="round"><img src="img/wholefoods.jpg"/></div></div>
+            <div class="col"><div class="round"><img src="img/delta.jpg"/></div></div>
+        </div>
+        <div class="row">
+            <div class="col"><div class="round"><img src="img/hyatt.jpg"/></div></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </ion-content>
+</ion-view>
