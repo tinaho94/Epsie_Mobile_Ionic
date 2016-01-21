@@ -1,0 +1,57 @@
+<ion-view view-title="Pay and Earn Rewards At the Same Time!">
+    <ion-content ng-class="{expanded:isExpanded}">
+    <br />
+    <br />
+    <center>
+        <h3 style="color: #000">Would you like to link your payment method with your Epsie ID?</h3>
+        <br />
+        <br/>
+    </center>
+        <input type="radio" name="re">
+          <label style="font-size:20px" class="radio-inline">Yes</label>
+          <label style="font-size:20px" class="radio-inline"><input type="radio" name="re">No</label>
+          <br />
+          <div class="reveal-if-active">
+          <br />
+          <br />
+            <select>
+              <option value="volvo">Visa</option>
+              <option value="saab">American Express</option>
+              <option value="opel">Apple Pay</option>
+              <option value="audi">Google Wallet</option>
+              <option value="audi">PayPal</option>
+            </select>
+          </div>
+    </ion-content>
+</ion-view>
+
+<style>
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+}
+</style>
+
+<script type="text/javascript">
+        var allRadios = document.getElementsByName('re');
+        var booRadio;
+        var x = 0;
+        for(x = 0; x < allRadios.length; x++){
+
+            allRadios[x].onclick = function() {
+                if(booRadio == this){
+                    this.checked = false;
+                    booRadio = null;
+                }else{
+                    booRadio = this;
+                }
+            };
+        }
+</script>

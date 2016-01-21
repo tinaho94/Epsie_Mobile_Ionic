@@ -136,3 +136,9 @@ p {
         background-color: #b5ffda;
         box-shadow: none;
         color: #fff; }
+
+    }
+
+.check_btn {
+    font-size: 100px;
+}

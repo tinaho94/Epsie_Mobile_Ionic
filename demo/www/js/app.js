@@ -55,12 +55,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.friends', {
-        url: '/friends',
+    .state('app.profile', {
+        url: '/profile',
         views: {
             'menuContent': {
-                templateUrl: 'templates/friends.html',
-                controller: 'FriendsCtrl'
+                templateUrl: 'templates/profile.html',
+                controller: 'ProfileCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-friends" class="button button-fab button-fab-top-left expanded button-energized-900 spin"><i class="icon ion-chatbubbles"></i></button>',
@@ -98,6 +98,55 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             'menuContent': {
                 templateUrl: 'templates/login.html',
                 controller: 'LoginCtrl'
+            },
+            'fabContent': {
+                template: ''
+            }
+        }
+    })
+
+    .state('app.payments', {
+        url: '/payments',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/payments.html',
+                controller: 'PaymentsCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-payments" class="button button-fab button-fab-top-right expanded button-energized-900 drop"><i class="icon ion-heart"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-payments').classList.toggle('on');
+                    }, 600);
+                }
+            }
+        }
+    })
+
+    .state('app.history', {
+        url: '/history',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/history.html',
+                controller: 'HistoryCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-payments" class="button button-fab button-fab-top-right expanded button-energized-900 drop"><i class="icon ion-heart"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-payments').classList.toggle('on');
+                    }, 600);
+                }
+            }
+        }
+    })
+
+    .state('app.GMaps', {
+        url: '/GMaps',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/GMaps.html',
+                controller: 'GMapsCtrl'
             },
             'fabContent': {
                 template: ''
